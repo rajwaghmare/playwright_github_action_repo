@@ -1,0 +1,42 @@
+name: Playwright Automation CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      # Step 3: Install dependencies with network checks
+      - name: Install Dependencies
+        run: |
+          npm install
+
+      # Step 4: Install playwright browser
+      - name: Install Playwright Browsers
+        run: |
+          npx playwright install    
+
+      # Step 5: Run tests
+      - name: Run Playwright Tests
+        run: npx playwright test
+
+      # Step 6: Debug step  
+      - name: Debug Test Files
+        run: ls -R tests

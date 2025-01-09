@@ -1,0 +1,23 @@
+{
+  "name": "playwright_github_action_repo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajwaghmare/playwright_github_action_repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rajwaghmare/playwright_github_action_repo/issues"
+  },
+  "homepage": "https://github.com/rajwaghmare/playwright_github_action_repo#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5"
+  }
+}
